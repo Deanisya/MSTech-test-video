@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Вырезки по видео</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			.video-container {
+				z-index: -1;
+				position: absolute;
+				inset: 0;
+			}
+			.video-container video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.overlay {
+				height: 100vh;
+				position: relative;
+				width: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				background-color: black;
+				padding: 10px;
+				color: white;
+				font-size: 120px;
+				font-weight: bold;
+				line-height: 1.3;
+			}
+			@media (max-width: 700px) {
+				.overlay {
+					font-size: 50px;
+				}
+			}
+			.line {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+
+			.cutout {
+				display: inline-block;
+				flex-grow: 1;
+				height: 80px;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="overlay">
+			<div class="line">
+				We’re here
+				<span class="cutout"
+					><div class="video-container">
+						<video autoplay loop muted playsinline>
+							<source src="./src/video.mp4" type="video/mp4" />
+						</video></div></span
+				>to make
+			</div>
+			<div class="line">
+				healthy
+				<span class="cutout"
+					><div class="video-container">
+						<video autoplay loop muted playsinline>
+							<source src="./src/video.mp4" type="video/mp4" />
+						</video></div
+				></span>
+				living effortless,
+			</div>
+			<div class="line">
+				so you can
+				<span class="cutout"
+					><div class="video-container">
+						<video autoplay loop muted playsinline>
+							<source src="./src/video.mp4" type="video/mp4" />
+						</video></div
+				></span>
+				live longer
+			</div>
+			<div class="line">
+				and happier
+				<span class="cutout"
+					><div class="video-container">
+						<video autoplay loop muted playsinline>
+							<source src="./src/video.mp4" type="video/mp4" />
+						</video></div
+				></span>
+			</div>
+		</div>
+	</body>
+</html>
